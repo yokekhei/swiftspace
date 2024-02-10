@@ -1,0 +1,44 @@
+{
+  "name": "swiftspace-landing-page",
+  "version": "1.0.0",
+  "description": "SwiftSpace realtor landing page",
+  "default": "src/index.html",
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "targets": {
+    "main": false
+  },
+  "scripts": {
+    "watch:sass": "sass src/sass/main.scss src/css/style.css -w",
+    "devserver": "live-server --open=src --browser=firefox",
+    "start:sass": "npm-run-all --parallel devserver watch:sass",
+    "compile:sass": "sass src/sass/main.scss src/css/style.comp.css",
+    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' src/css/style.comp.css -o src/css/style.prefix.css",
+    "compress:css": "sass src/css/style.prefix.css src/css/style.css --style compressed",
+    "build:css": "npm-run-all compile:sass prefix:css compress:css",
+    "clean:dist": "if exist dist rmdir dist /Q/S && mkdir dist && mkdir dist\\assets\\ && mkdir dist\\img\\houses\\",
+    "copy:assets": "xcopy src\\assets\\ dist\\assets\\ /E/H",
+    "copy:img": "xcopy src\\img\\houses\\ dist\\img\\houses\\ /E/H",
+    "create:dist": "mkdir -p dist/assets/ && cp -rf src/assets/* dist/assets && mkdir -p dist/img/houses/ && cp -rf src/img/houses/* dist/img/houses",
+    "init:parcel": "npm-run-all clean:dist copy:assets copy:img",
+    "start:parcel": "parcel src/index.html",
+    "build:parcel": "parcel build src/index.html --dist-dir ./dist",
+    "start": "npm-run-all init:parcel start:parcel",
+    "build": "npm-run-all init:parcel build:parcel",
+    "build:netlify": "npm-run-all create:dist build:parcel"
+  },
+  "author": "Y.K. Lam",
+  "license": "ISC",
+  "devDependencies": {
+    "@parcel/packager-raw-url": "^2.10.3",
+    "@parcel/transformer-webmanifest": "^2.10.3",
+    "autoprefixer": "^10.4.16",
+    "npm-run-all": "^4.1.5",
+    "parcel": "^2.10.3",
+    "postcss-cli": "^10.1.0",
+    "sass": "^1.69.5"
+  },
+  "dependencies": {
+    "core-js": "^3.33.3",
+    "regenerator-runtime": "^0.14.0"
+  }
+}

@@ -1,0 +1,32 @@
+.realtor {
+  grid-column: realtor-start / realtor-end;
+
+  @include respond(tab-port) {
+    grid-column: 1 / -1;
+  }
+
+  background-color: var(--color-secondary);
+  padding: 3.2rem;
+
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  justify-items: center;
+  row-gap: 2.4rem;
+
+  .realtor__list {
+    list-style: none;
+
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+
+    @include respond(tab-port) {
+      flex-direction: row;
+    }
+
+    @include respond(phone) {
+      flex-direction: column;
+    }
+  }
+}

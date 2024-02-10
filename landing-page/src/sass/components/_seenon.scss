@@ -1,0 +1,38 @@
+.seenon {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+
+  &__text {
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+    align-items: center;
+    column-gap: 1.6rem;
+
+    color: var(--color-grey-08);
+    font-family: $font-primary;
+    font-size: 1.6rem;
+
+    &::before,
+    &::after {
+      content: '';
+      display: block;
+      height: 1px;
+      background-color: currentColor;
+    }
+  }
+
+  &__logos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 3.2rem;
+    justify-items: center;
+    align-items: center;
+  }
+
+  &__logo {
+    max-height: 2.4rem;
+    max-width: 100%;
+    opacity: 50%;
+  }
+}

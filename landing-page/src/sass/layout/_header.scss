@@ -1,0 +1,28 @@
+.header {
+  grid-column: header-start / header-end;
+
+  @include respond(tab-port) {
+    grid-column: 1 / -1;
+  }
+
+  background: linear-gradient(
+      rgba(var(--color-secondary-rgb), 0.93),
+      rgba(var(--color-secondary-rgb), 0.93)
+    ),
+    url('../img/hero.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: var(--layout-padding-left-right);
+  padding-top: 4.8rem;
+
+  display: grid;
+  grid-template-rows: 1fr min-content min-content 1fr min-content;
+  grid-template-columns: minmax(min-content, max-content);
+  justify-content: center;
+  row-gap: 1.6rem;
+
+  &__btn {
+    align-self: start;
+    justify-self: start;
+  }
+}

@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="description"
+      content="Welcome to SwiftSpace, where your real estate dreams take flight. At SwiftSpace, we redefine the experience of finding your perfect home by combining cutting-edge technology with personalized service. Our global network of skilled real estate professionals is dedicated to guiding you through the journey of buying or selling property, ensuring swift and seamless transactions. From luxurious penthouses to charming cottages, SwiftSpace opens doors to a world of unparalleled possibilities. Trust us to transform your real estate aspirations into reality, with expertise that spans borders and a commitment to delivering exceptional results. Welcome to a new era of real estate with SwiftSpace — where your property journey becomes an extraordinary adventure."
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="img/favicon.png" type="image/png" />
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;1,400&family=Nunito:ital,wght@0,300;0,400;1,300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script
+      defer
+      src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"
+    ></script>
+    <script defer src="https://smtpjs.com/v3/smtp.js"></script>
+    <script type="module" defer src="js/controller.js"></script>
+    <title>
+      SwiftSpace &mdash; Building Dreams, Unlocking Freedom, One Home at a Time
+    </title>
+  </head>
+  <body class="home">
+    <div class="navigation">
+      <a href="#">
+        <img
+          src="img/logo.png"
+          alt="SwiftSpace company logo"
+          class="navigation__logo"
+        />
+      </a>
+      <nav class="navigation__menu">
+        <ul class="navigation__list">
+          <li>
+            <a href="#features" class="nav-item">
+              <svg class="nav-item__icon" name="star-outline">
+                <use xlink:href="img/sprite.svg#star-outline"></use>
+              </svg>
+              <span class="nav-item__text">Features</span>
+            </a>
+          </li>
+          <li>
+            <a href="#story" class="nav-item">
+              <svg class="nav-item__icon" name="book-open-text-outline">
+                <use xlink:href="img/sprite.svg#book-open-text-outline"></use>
+              </svg>
+              <span class="nav-item__text">User Story</span>
+            </a>
+          </li>
+          <li>
+            <a href="#houses" class="nav-item">
+              <svg class="nav-item__icon" name="house-line-outline">
+                <use xlink:href="img/sprite.svg#house-line-outline"></use>
+              </svg>
+              <span class="nav-item__text">House Listing</span>
+            </a>
+          </li>
+          <li>
+            <a href="#contact" class="nav-item">
+              <svg class="nav-item__icon" name="envelope-outline">
+                <use xlink:href="img/sprite.svg#envelope-outline"></use>
+              </svg>
+              <span class="nav-item__text">Contact</span>
+            </a>
+          </li>
+          <li>
+            <a href="#gallery" class="nav-item">
+              <svg class="nav-item__icon" name="image-outline">
+                <use xlink:href="img/sprite.svg#image-outline"></use>
+              </svg>
+              <span class="nav-item__text">Gallery</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <button class="navigation__menu-btn">
+        <svg class="navigation__menu-icon" name="list-outline">
+          <use xlink:href="img/sprite.svg#list-outline"></use>
+        </svg>
+        <svg class="navigation__menu-icon" name="x-outline">
+          <use xlink:href="img/sprite.svg#x-outline"></use>
+        </svg>
+      </button>
+    </div>
+    <main class="home__main">
+      <section class="section-hero">
+        <header class="header">
+          <div class="logo">
+            <img
+              src="img/logo.png"
+              alt="SwiftSpace company logo"
+              class="logo__img"
+            />
+            <img
+              src="img/logo-text.png"
+              alt="SwiftSpace company title"
+              class="logo__text"
+            />
+          </div>
+          <h3 class="heading-3">Liberate Your Lifestyle:</h3>
+          <h1 class="heading-1">Own your home, own your freedom</h1>
+          <a href="#houses" class="button button--link header__btn"
+            >View our listings</a
+          >
+          <div class="seenon">
+            <p class="seenon__text">Seen on</p>
+            <div class="seenon__logos">
+              <img
+                src="img/seenon/logo-bbc.png"
+                alt="Seen on logo bbc"
+                class="seenon__logo"
+              />
+              <img
+                src="img/seenon/logo-forbes.png"
+                alt="Seen on logo forbes"
+                class="seenon__logo"
+              />
+              <img
+                src="img/seenon/logo-techcrunch.png"
+                alt="Seen on logo techcrunch"
+                class="seenon__logo"
+              />
+              <img
+                src="img/seenon/logo-bi.png"
+                alt="Seen on logo business insider"
+                class="seenon__logo"
+              />
+            </div>
+          </div>
+        </header>
+        <div class="realtor">
+          <h3 class="heading-3">Top 3 Realtors</h3>
+          <ul class="realtor__list">
+            <li class="realtor-card">
+              <img
+                src="img/realtors/realtor-1.jpg"
+                alt="Realtor 1"
+                class="realtor-card__img"
+              />
+              <h4 class="heading-4 heading-4--light realtor-card__title">
+                Alexander Mitchell
+              </h4>
+              <p class="realtor-card__text">315 houses sold</p>
+            </li>
+            <li class="realtor-card">
+              <img
+                src="img/realtors/realtor-2.jpg"
+                alt="Realtor 2"
+                class="realtor-card__img"
+              />
+              <h4 class="heading-4 heading-4--light realtor-card__title">
+                Emily Thompson
+              </h4>
+              <p class="realtor-card__text">253 houses sold</p>
+            </li>
+            <li class="realtor-card">
+              <img
+                src="img/realtors/realtor-3.jpg"
+                alt="Realtor 2"
+                class="realtor-card__img"
+              />
+              <h4 class="heading-4 heading-4--light realtor-card__title">
+                Benjamin Anderson
+              </h4>
+              <p class="realtor-card__text">189 houses sold</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="section-features" id="features">
+        <div class="feature-box">
+          <svg class="feature-box__icon" name="globe-outline">
+            <use xlink:href="img/sprite.svg#globe-outline"></use>
+          </svg>
+          <h4 class="heading-4 heading-4--dark feature-box__title">
+            Global elite homes
+          </h4>
+          <div class="feature-box__text">
+            We offer unparalleled luxury and sophistication in prestigious
+            locations around the world.
+          </div>
+        </div>
+        <div class="feature-box">
+          <svg class="feature-box__icon" name="trophy-outline">
+            <use xlink:href="img/sprite.svg#trophy-outline"></use>
+          </svg>
+          <h4 class="heading-4 heading-4--dark feature-box__title">
+            Premium exclusives
+          </h4>
+          <div class="feature-box__text">
+            Explore a curated collection of exclusively superior properties,
+            epitomizing excellence in detail.
+          </div>
+        </div>
+        <div class="feature-box">
+          <svg class="feature-box__icon" name="map-pin-outline">
+            <use xlink:href="img/sprite.svg#map-pin-outline"></use>
+          </svg>
+          <h4 class="heading-4 heading-4--dark feature-box__title">
+            Homes in prime locations
+          </h4>
+          <div class="feature-box__text">
+            Residences strategically placed in prime locations, offering
+            prestige for a lifestyle of distinction.
+          </div>
+        </div>
+        <div class="feature-box">
+          <svg class="feature-box__icon" name="key-outline">
+            <use xlink:href="img/sprite.svg#key-outline"></use>
+          </svg>
+          <h4 class="heading-4 heading-4--dark feature-box__title">
+            New home within a week
+          </h4>
+          <div class="feature-box__text">
+            Ensuring a swift and seamless transition to your new home within
+            just one week.
+          </div>
+        </div>
+        <div class="feature-box">
+          <svg class="feature-box__icon" name="chart-line-up-outline">
+            <use xlink:href="img/sprite.svg#chart-line-up-outline"></use>
+          </svg>
+          <h4 class="heading-4 heading-4--dark feature-box__title">
+            Top realtors
+          </h4>
+          <div class="feature-box__text">
+            Engage with top realtors who excel in ensuring a seamless and
+            successful real estate experience.
+          </div>
+        </div>
+        <div class="feature-box">
+          <svg class="feature-box__icon" name="lock-key-outline">
+            <use xlink:href="img/sprite.svg#lock-key-outline"></use>
+          </svg>
+          <h4 class="heading-4 heading-4--dark feature-box__title">
+            Protected transactions
+          </h4>
+          <div class="feature-box__text">
+            Rest assured with our platform's secure infrastructure and protected
+            transactions.
+          </div>
+        </div>
+      </section>
+      <section class="section-story" id="story">
+        <div class="story__pictures">
+          <img
+            src="img/story/story-1.jpg"
+            alt="Couple with new house"
+            class="story__img--1"
+          />
+          <img
+            src="img/story/story-2.jpg"
+            alt="New house"
+            class="story__img--2"
+          />
+        </div>
+        <div class="story__content">
+          <h3 class="heading-3 mb-sm">Contented Clients</h3>
+          <h2 class="heading-2 heading-2--quote heading-2--dark u-mb-md-lg">
+            &ldquo;The most impactful choice we've ever made&rdquo;
+          </h2>
+          <p class="story__text u-mb-lg">
+            Our dedication to excellence is reflected in the smiles of our
+            contented clients, who have found their ideal homes with us.
+          </p>
+          <a href="#" class="button button--link">Explore your home</a>
+        </div>
+      </section>
+      <section class="section-houses" id="houses">
+        <div class="house-box">
+          <img
+            src="img/houses/house-1.jpg"
+            alt="House 1"
+            class="house-box__img"
+          />
+          <button class="house-box__like-btn">
+            <svg class="house-box__icon house-box__icon--fill" name="heart">
+              <use xlink:href="img/sprite.svg#heart"></use>
+            </svg>
+          </button>
+          <h5 class="house-box__name">Modern Spacious Villa</h5>
+          <div class="house-box__location">
+            <svg class="house-box__icon" name="map-pin-outline">
+              <use xlink:href="img/sprite.svg#map-pin-outline"></use>
+            </svg>
+            <span class="house-box__text">USA</span>
+          </div>
+          <div class="house-box__rooms">
+            <svg class="house-box__icon" name="person-outline">
+              <use xlink:href="img/sprite.svg#person-outline"></use>
+            </svg>
+            <span class="house-box__text">6 rooms</span>
+          </div>
+          <div class="house-box__area">
+            <svg class="house-box__icon" name="frame-corners-outline">
+              <use xlink:href="img/sprite.svg#frame-corners-outline"></use>
+            </svg>
+            <span class="house-box__text">420 m<sup>2</sup></span>
+          </div>
+          <div class="house-box__price">
+            <svg class="house-box__icon" name="currency-circle-dollar-outline">
+              <use
+                xlink:href="img/sprite.svg#currency-circle-dollar-outline"
+              ></use>
+            </svg>
+            <span class="house-box__text">$2,100,000</span>
+          </div>
+          <a href="#contact" class="button button--link house-box__btn"
+            >Contact realtor</a
+          >
+        </div>
+        <div class="container section-houses-link-container">
+          <a href="#" class="text-link text-link--with-padding-bottom"
+            >See all listings &rarr;</a
+          >
+        </div>
+      </section>
+      <section class="section-contact" id="contact">
+        <div class="contact">
+          <div class="contact__text-box">
+            <div class="contact__content">
+              <p class="heading-2 heading-2--dark contact__heading">
+                Unlock the door to your dreams!
+              </p>
+              <p class="contact__text">
+                Your first home awaits with our expert guidance. Experience the
+                joy of ownership &dash; let's make it happen together. Start
+                your journey with SwiftSpace today!
+              </p>
+            </div>
+            <form class="contact__form">
+              <div class="form-input-item form-input-item--vertical">
+                <label for="full_name">Full Name</label>
+                <input
+                  type="text"
+                  id="full_name"
+                  name="full_name"
+                  placeholder="John Smith"
+                  required
+                />
+              </div>
+              <div class="form-input-item form-input-item--vertical">
+                <label for="email">Email Address</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="me@example.com"
+                  required
+                />
+              </div>
+              <div class="form-input-item form-input-item--vertical">
+                <label for="inquiry">Inquiry</label>
+                <textarea
+                  id="inquiry"
+                  name="inquiry"
+                  rows="3"
+                  cols="30"
+                  placeholder="Leave a message here"
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="button contact__form-btn">
+                Submit
+              </button>
+            </form>
+          </div>
+          <div
+            class="contact__img-box"
+            role="img"
+            aria-label="A toy house with house architecture design drawings and magnifying glass"
+          ></div>
+        </div>
+      </section>
+      <section class="section-gallery" id="gallery">
+        <figure class="gallery-item--1">
+          <img
+            src="img/gallery/gal-1.jpg"
+            alt="Gallery image 1"
+            class="gallery-item__img"
+          />
+        </figure>
+        <figure class="gallery-item--2">
+          <img
+            src="img/gallery/gal-2.jpg"
+            alt="Gallery image 2"
+            class="gallery-item__img"
+          />
+        </figure>
+        <figure class="gallery-item--3">
+          <img
+            src="img/gallery/gal-3.jpg"
+            alt="Gallery image 3"
+            class="gallery-item__img"
+          />
+        </figure>
+        <figure class="gallery-item--4">
+          <img
+            src="img/gallery/gal-4.jpg"
+            alt="Gallery image 4"
+            class="gallery-item__img"
+          />
+        </figure>
+        <figure class="gallery-item--5">
+          <img
+            src="img/gallery/gal-5.jpg"
+            alt="Gallery image 5"
+            class="gallery-item__img"
+          />
+        </figure>
+        <figure class="gallery-item--6">
+          <img
+            src="img/gallery/gal-6.jpg"
+            alt="Gallery image 6"
+            class="gallery-item__img"
+          />
+        </figure>
+        <figure class="gallery-item--7">
+          <img
+            src="img/gallery/gal-7.jpg"
+            alt="Gallery image 7"
+            class="gallery-item__img"
+          />
+        </figure>
+        <figure class="gallery-item--8">
+          <img
+            src="img/gallery/gal-8.jpg"
+            alt="Gallery image 8"
+            class="gallery-item__img"
+          />
+        </figure>
+        <figure class="gallery-item--9">
+          <img
+            src="img/gallery/gal-9.jpg"
+            alt="Gallery image 9"
+            class="gallery-item__img"
+          />
+        </figure>
+        <figure class="gallery-item--10">
+          <img
+            src="img/gallery/gal-10.jpg"
+            alt="Gallery image 10"
+            class="gallery-item__img"
+          />
+        </figure>
+        <figure class="gallery-item--11">
+          <img
+            src="img/gallery/gal-11.jpg"
+            alt="Gallery image 11"
+            class="gallery-item__img"
+          />
+        </figure>
+        <figure class="gallery-item--12">
+          <img
+            src="img/gallery/gal-12.jpg"
+            alt="Gallery image 12"
+            class="gallery-item__img"
+          />
+        </figure>
+        <figure class="gallery-item--13">
+          <img
+            src="img/gallery/gal-13.jpg"
+            alt="Gallery image 13"
+            class="gallery-item__img"
+          />
+        </figure>
+        <figure class="gallery-item--14">
+          <img
+            src="img/gallery/gal-14.jpg"
+            alt="Gallery image 14"
+            class="gallery-item__img"
+          />
+        </figure>
+      </section>
+      <section class="section-footer">
+        <ul class="footer__nav">
+          <li>
+            <a href="#" class="footer__item">Discover your ideal residence</a>
+          </li>
+          <li><a href="#" class="footer__item">Request Proposal</a></li>
+          <li><a href="#" class="footer__item">Download Home Planner</a></li>
+          <li><a href="#" class="footer__item">Contact Us</a></li>
+          <li><a href="#" class="footer__item">Submit Your Property</a></li>
+          <li><a href="#" class="footer__item">Come Work With Us</a></li>
+        </ul>
+        <p class="footer__copyright">
+          Copyright &copy; <span class="year">2027</span> by SwiftSpace, Inc.
+          All rights reserved.
+        </p>
+      </section>
+      <section class="section-disclaimer disclaimer__open">
+        <p class="disclaimer__header">
+          Disclaimer: This Webpage Is for Demonstration and Educational Purposes
+        </p>
+        <button class="disclaimer__btn">
+          <svg
+            class="disclaimer__icon disclaimer__icon--down"
+            name="caret-down-outline"
+          >
+            <use xlink:href="img/sprite.svg#caret-down-outline"></use>
+          </svg>
+          <svg
+            class="disclaimer__icon disclaimer__icon--up"
+            name="caret-up-outline"
+          >
+            <use xlink:href="img/sprite.svg#caret-up-outline"></use>
+          </svg>
+        </button>
+        <div class="disclaimer__content">
+          <p class="disclaimer__text">
+            The "$company-Inspired Web Redesign" webpage showcased here is a
+            project designed and developed by $developer for educational and
+            portfolio demonstration purposes only. It is not affiliated with
+            $domain, nor is it intended to impersonate or represent $company's
+            official website in any manner.
+          </p>
+          <p class="disclaimer__text strong">Key Points:</p>
+          <ol class="disclaimer__items">
+            <li class="disclaimer__text">
+              <span class="strong">Educational Showcase:</span> This webpage is
+              part of $developer's web developer portfolio and serves as an
+              educational tool to demonstrate web development and design skills.
+            </li>
+            <li class="disclaimer__text">
+              <span class="strong">Inspired by $company:</span> The design of
+              this webpage is inspired by $domain to showcase proficiency in web
+              design and development, including HTML, CSS, and JavaScript.
+            </li>
+            <li class="disclaimer__text">
+              <span class="strong">No Official Affiliation:</span> This project
+              has no official affiliation or endorsement from $domain.
+            </li>
+            <li class="disclaimer__text">
+              <span class="strong">Not for Commercial Use:</span> This webpage
+              is not intended for commercial use, and it does not facilitate
+              actual commercial transactions.
+            </li>
+          </ol>
+          <p class="disclaimer__text strong">
+            Respect for Copyright and Branding:
+          </p>
+          <p class="disclaimer__text">
+            $developer respects $company's intellectual property rights and
+            branding guidelines. The use of $company's design elements is solely
+            for the purpose of educational demonstration, and no attempt is made
+            to infringe upon any rights held by $domain.
+          </p>
+          <p class="disclaimer__text strong">Please Note:</p>
+          <p class="disclaimer__text">
+            While every effort has been made to accurately mimic the appearance
+            of $company's website, this project is a design exercise and should
+            not be mistaken for or used as the actual $domain website.
+          </p>
+          <p class="disclaimer__text">
+            If you have any questions or concerns regarding this project, please
+            feel free to contact
+            <a href="$contactUrl" class="text-link disclaimer__link"
+              >$developer</a
+            >.
+          </p>
+        </div>
+      </section>
+
+      <div class="modal u-hidden">
+        <svg class="modal__icon--status" name="smiley-outline">
+          <use xlink:href="img/sprite.svg#smiley-outline"></use>
+        </svg>
+        <h4 class="heading-4 heading-4--dark modal__title">
+          Inquiry submitted
+        </h4>
+        <button class="modal__close-btn">
+          <svg class="modal__icon--close" name="x-outline">
+            <use xlink:href="img/sprite.svg#x-outline"></use>
+          </svg>
+        </button>
+        <div class="modal__text">
+          Thank you for your inquiry! Our team is on it! We'll get back to you
+          shortly with all the details you need. In the meantime, feel free to
+          explore more on our website or connect with us on social media. Your
+          dream home adventure begins now!
+        </div>
+      </div>
+      <div class="overlay u-hidden"></div>
+    </main>
+  </body>
+</html>

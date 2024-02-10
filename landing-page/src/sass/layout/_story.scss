@@ -1,0 +1,78 @@
+.story {
+  &__pictures {
+    grid-row: 1;
+    grid-column: 1;
+    background-image: linear-gradient(
+        rgba(var(--color-primary-rgb), 0.5),
+        rgba(var(--color-primary-rgb), 0.5)
+      ),
+      url('../img/story/back.jpg');
+    background-size: cover;
+    background-position: center;
+
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: repeat(6, 1fr);
+    align-items: center;
+    justify-items: center;
+
+    @include respond(tab-port) {
+      grid-row: 2;
+      grid-column: 1;
+      padding: 6.4rem;
+    }
+  }
+
+  &__img {
+    &--1 {
+      grid-row: 2 / 6;
+      grid-column: 2 / 6;
+      max-width: 100%;
+      box-shadow: 0 2rem 5rem rgba(var(--color-primary-shade-10-rgb), 0.1);
+
+      @include respond(tab-port) {
+        grid-row: 1 / -1;
+        grid-column: 1 / 5;
+      }
+    }
+
+    &--2 {
+      grid-row: 4 / 7;
+      grid-column: 4 / 7;
+      max-width: 105%;
+      box-shadow: 0 2rem 5rem rgba(var(--color-primary-shade-10-rgb), 0.1);
+      z-index: $layer-story-img;
+      transform: translate(6%, -10%);
+
+      @include respond(tab-port) {
+        grid-row: 1 / -1;
+        max-width: 90%;
+        transform: translate(0, 25%);
+      }
+    }
+  }
+
+  &__content {
+    grid-row: 1;
+    grid-column: 2;
+    padding: var(--layout-padding) 7vw;
+    background-color: var(--color-primary-tint-09);
+
+    @include respond(tab-port) {
+      grid-row: 1;
+      grid-column: 1;
+    }
+
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    justify-items: start;
+  }
+
+  &__text {
+    font-size: 1.6rem;
+    font-style: italic;
+    color: $color-body-text;
+    line-height: 1.6;
+  }
+}

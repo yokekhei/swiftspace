@@ -1,0 +1,64 @@
+{
+  "houses": [
+    {
+      "img_src": "img/houses/house-1.jpg",
+      "img_alt": "House 1",
+      "is_like": true,
+      "house_name": "Modern Spacious Villa",
+      "location": "USA",
+      "room_count": 6,
+      "area_m2": 420,
+      "price": 2100000
+    },
+    {
+      "img_src": "img/houses/house-2.jpg",
+      "img_alt": "House 2",
+      "is_like": false,
+      "house_name": "Stunning Glass Villa",
+      "location": "France",
+      "room_count": 6,
+      "area_m2": 480,
+      "price": 2700000
+    },
+    {
+      "img_src": "img/houses/house-3.jpg",
+      "img_alt": "House 3",
+      "is_like": true,
+      "house_name": "Comfortable Family House",
+      "location": "Germany",
+      "room_count": 4,
+      "area_m2": 300,
+      "price": 900000
+    },
+    {
+      "img_src": "img/houses/house-4.jpg",
+      "img_alt": "House 4",
+      "is_like": false,
+      "house_name": "Cozy Family House",
+      "location": "Italy",
+      "room_count": 4,
+      "area_m2": 280,
+      "price": 850000
+    },
+    {
+      "img_src": "img/houses/house-5.jpg",
+      "img_alt": "House 5",
+      "is_like": true,
+      "house_name": "Large Ranch-style House",
+      "location": "Spain",
+      "room_count": 5,
+      "area_m2": 350,
+      "price": 1000000
+    },
+    {
+      "img_src": "img/houses/house-6.jpg",
+      "img_alt": "House 6",
+      "is_like": false,
+      "house_name": "Charming Rustical Cottage",
+      "location": "Sweden",
+      "room_count": 3,
+      "area_m2": 250,
+      "price": 700000
+    }
+  ]
+}

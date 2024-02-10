@@ -28,33 +28,33 @@ class HousesView extends View {
         <button class="house-box__like-btn">
           <svg class="house-box__icon house-box__icon--${
             data.isLike ? 'fill' : 'empty'
-          }" name="heart">
+          }">
             <use xlink:href="${icons}#heart"></use>
           </svg>
         </button>
         <h5 class="house-box__name">${data.houseName}</h5>
         <div class="house-box__location">
-          <svg class="house-box__icon" name="map-pin-outline">
+          <svg class="house-box__icon">
             <use xlink:href="${icons}#map-pin-outline"></use>
           </svg>
           <span class="house-box__text">${data.location}</span>
         </div>
         <div class="house-box__rooms">
-          <svg class="house-box__icon" name="person-outline">
+          <svg class="house-box__icon">
             <use xlink:href="${icons}#person-outline"></use>
           </svg>
           <span class="house-box__text">${data.roomCount} rooms</span>
         </div>
 
         <div class="house-box__area">
-          <svg class="house-box__icon" name="frame-corners-outline">
+          <svg class="house-box__icon">
             <use xlink:href="${icons}#frame-corners-outline"></use>
           </svg>
           <span class="house-box__text">${data.areaM2} m<sup>2</sup></span>
         </div>
 
         <div class="house-box__price">
-          <svg class="house-box__icon" name="currency-circle-dollar-outline">
+          <svg class="house-box__icon">
             <use
               xlink:href="${icons}#currency-circle-dollar-outline">
             </use>

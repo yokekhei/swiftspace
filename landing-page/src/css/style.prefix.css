@@ -1073,7 +1073,7 @@ body {
   stroke: currentColor;
   fill: currentColor;
 }
-.navigation__menu-icon[name=x-outline] {
+.navigation__menu-icon--x-outline {
   display: none;
 }
 .navigation__list {
@@ -1091,11 +1091,11 @@ body {
   transform: translateX(0);
 }
 
-.nav-open .navigation__menu-icon[name=x-outline] {
+.nav-open .navigation__menu-icon.navigation__menu-icon--x-outline {
   display: block;
 }
 
-.nav-open .navigation__menu-icon[name=list-outline] {
+.nav-open .navigation__menu-icon.navigation__menu-icon--list-outline {
   display: none;
 }
 

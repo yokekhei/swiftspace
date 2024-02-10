@@ -41,7 +41,7 @@
         <ul class="navigation__list">
           <li>
             <a href="#features" class="nav-item">
-              <svg class="nav-item__icon" name="star-outline">
+              <svg class="nav-item__icon">
                 <use xlink:href="img/sprite.svg#star-outline"></use>
               </svg>
               <span class="nav-item__text">Features</span>
@@ -49,7 +49,7 @@
           </li>
           <li>
             <a href="#story" class="nav-item">
-              <svg class="nav-item__icon" name="book-open-text-outline">
+              <svg class="nav-item__icon">
                 <use xlink:href="img/sprite.svg#book-open-text-outline"></use>
               </svg>
               <span class="nav-item__text">User Story</span>
@@ -57,7 +57,7 @@
           </li>
           <li>
             <a href="#houses" class="nav-item">
-              <svg class="nav-item__icon" name="house-line-outline">
+              <svg class="nav-item__icon">
                 <use xlink:href="img/sprite.svg#house-line-outline"></use>
               </svg>
               <span class="nav-item__text">House Listing</span>
@@ -65,7 +65,7 @@
           </li>
           <li>
             <a href="#contact" class="nav-item">
-              <svg class="nav-item__icon" name="envelope-outline">
+              <svg class="nav-item__icon">
                 <use xlink:href="img/sprite.svg#envelope-outline"></use>
               </svg>
               <span class="nav-item__text">Contact</span>
@@ -73,7 +73,7 @@
           </li>
           <li>
             <a href="#gallery" class="nav-item">
-              <svg class="nav-item__icon" name="image-outline">
+              <svg class="nav-item__icon">
                 <use xlink:href="img/sprite.svg#image-outline"></use>
               </svg>
               <span class="nav-item__text">Gallery</span>
@@ -82,10 +82,10 @@
         </ul>
       </nav>
       <button class="navigation__menu-btn">
-        <svg class="navigation__menu-icon" name="list-outline">
+        <svg class="navigation__menu-icon navigation__menu-icon--list-outline">
           <use xlink:href="img/sprite.svg#list-outline"></use>
         </svg>
-        <svg class="navigation__menu-icon" name="x-outline">
+        <svg class="navigation__menu-icon navigation__menu-icon--x-outline">
           <use xlink:href="img/sprite.svg#x-outline"></use>
         </svg>
       </button>
@@ -177,7 +177,7 @@
       </section>
       <section class="section-features" id="features">
         <div class="feature-box">
-          <svg class="feature-box__icon" name="globe-outline">
+          <svg class="feature-box__icon">
             <use xlink:href="img/sprite.svg#globe-outline"></use>
           </svg>
           <h4 class="heading-4 heading-4--dark feature-box__title">
@@ -189,7 +189,7 @@
           </div>
         </div>
         <div class="feature-box">
-          <svg class="feature-box__icon" name="trophy-outline">
+          <svg class="feature-box__icon">
             <use xlink:href="img/sprite.svg#trophy-outline"></use>
           </svg>
           <h4 class="heading-4 heading-4--dark feature-box__title">
@@ -201,7 +201,7 @@
           </div>
         </div>
         <div class="feature-box">
-          <svg class="feature-box__icon" name="map-pin-outline">
+          <svg class="feature-box__icon">
             <use xlink:href="img/sprite.svg#map-pin-outline"></use>
           </svg>
           <h4 class="heading-4 heading-4--dark feature-box__title">
@@ -213,7 +213,7 @@
           </div>
         </div>
         <div class="feature-box">
-          <svg class="feature-box__icon" name="key-outline">
+          <svg class="feature-box__icon">
             <use xlink:href="img/sprite.svg#key-outline"></use>
           </svg>
           <h4 class="heading-4 heading-4--dark feature-box__title">
@@ -225,7 +225,7 @@
           </div>
         </div>
         <div class="feature-box">
-          <svg class="feature-box__icon" name="chart-line-up-outline">
+          <svg class="feature-box__icon">
             <use xlink:href="img/sprite.svg#chart-line-up-outline"></use>
           </svg>
           <h4 class="heading-4 heading-4--dark feature-box__title">
@@ -237,7 +237,7 @@
           </div>
         </div>
         <div class="feature-box">
-          <svg class="feature-box__icon" name="lock-key-outline">
+          <svg class="feature-box__icon">
             <use xlink:href="img/sprite.svg#lock-key-outline"></use>
           </svg>
           <h4 class="heading-4 heading-4--dark feature-box__title">
@@ -282,31 +282,31 @@
             class="house-box__img"
           />
           <button class="house-box__like-btn">
-            <svg class="house-box__icon house-box__icon--fill" name="heart">
+            <svg class="house-box__icon house-box__icon--fill">
               <use xlink:href="img/sprite.svg#heart"></use>
             </svg>
           </button>
           <h5 class="house-box__name">Modern Spacious Villa</h5>
           <div class="house-box__location">
-            <svg class="house-box__icon" name="map-pin-outline">
+            <svg class="house-box__icon">
               <use xlink:href="img/sprite.svg#map-pin-outline"></use>
             </svg>
             <span class="house-box__text">USA</span>
           </div>
           <div class="house-box__rooms">
-            <svg class="house-box__icon" name="person-outline">
+            <svg class="house-box__icon">
               <use xlink:href="img/sprite.svg#person-outline"></use>
             </svg>
             <span class="house-box__text">6 rooms</span>
           </div>
           <div class="house-box__area">
-            <svg class="house-box__icon" name="frame-corners-outline">
+            <svg class="house-box__icon">
               <use xlink:href="img/sprite.svg#frame-corners-outline"></use>
             </svg>
             <span class="house-box__text">420 m<sup>2</sup></span>
           </div>
           <div class="house-box__price">
-            <svg class="house-box__icon" name="currency-circle-dollar-outline">
+            <svg class="house-box__icon">
               <use
                 xlink:href="img/sprite.svg#currency-circle-dollar-outline"
               ></use>
@@ -501,16 +501,10 @@
           Disclaimer: This Webpage Is for Demonstration and Educational Purposes
         </p>
         <button class="disclaimer__btn">
-          <svg
-            class="disclaimer__icon disclaimer__icon--down"
-            name="caret-down-outline"
-          >
+          <svg class="disclaimer__icon disclaimer__icon--down">
             <use xlink:href="img/sprite.svg#caret-down-outline"></use>
           </svg>
-          <svg
-            class="disclaimer__icon disclaimer__icon--up"
-            name="caret-up-outline"
-          >
+          <svg class="disclaimer__icon disclaimer__icon--up">
             <use xlink:href="img/sprite.svg#caret-up-outline"></use>
           </svg>
         </button>
@@ -570,14 +564,14 @@
       </section>
 
       <div class="modal u-hidden">
-        <svg class="modal__icon--status" name="smiley-outline">
+        <svg class="modal__icon--status">
           <use xlink:href="img/sprite.svg#smiley-outline"></use>
         </svg>
         <h4 class="heading-4 heading-4--dark modal__title">
           Inquiry submitted
         </h4>
         <button class="modal__close-btn">
-          <svg class="modal__icon--close" name="x-outline">
+          <svg class="modal__icon--close">
             <use xlink:href="img/sprite.svg#x-outline"></use>
           </svg>
         </button>

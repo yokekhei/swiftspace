@@ -72,7 +72,7 @@
       stroke: currentColor;
       fill: currentColor;
 
-      &[name='x-outline'] {
+      &--x-outline {
         display: none;
       }
     }
@@ -95,10 +95,10 @@
   transform: translateX(0);
 }
 
-.nav-open .navigation__menu-icon[name='x-outline'] {
+.nav-open .navigation__menu-icon.navigation__menu-icon--x-outline {
   display: block;
 }
 
-.nav-open .navigation__menu-icon[name='list-outline'] {
+.nav-open .navigation__menu-icon.navigation__menu-icon--list-outline {
   display: none;
 }

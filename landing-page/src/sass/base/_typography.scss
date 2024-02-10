@@ -1,0 +1,86 @@
+%heading {
+  font-family: $font-display;
+  font-weight: 400;
+  letter-spacing: -0.5px;
+}
+
+.heading {
+  &-1 {
+    @extend %heading;
+    font-size: 4.4rem;
+    color: $color-heading-1;
+    text-transform: capitalize;
+    line-height: 1.05;
+  }
+
+  &-2 {
+    @extend %heading;
+    font-size: 3.6rem;
+    line-height: 1.2;
+
+    &--quote {
+      font-style: italic;
+    }
+
+    &--light {
+      color: $color-heading-2-light;
+    }
+
+    &--dark {
+      color: $color-heading-2-dark;
+    }
+  }
+
+  &-3 {
+    @extend %heading;
+    font-size: 1.6rem;
+    color: $color-heading-3;
+    text-transform: uppercase;
+    line-height: 1.2;
+  }
+
+  &-4 {
+    @extend %heading;
+    font-size: 2rem;
+    line-height: 1.2;
+
+    &--light {
+      color: $color-heading-4-light;
+    }
+
+    &--dark {
+      color: $color-heading-4-dark;
+    }
+  }
+}
+
+.text-link {
+  &:link,
+  &:visited {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: var(--color-primary-shade-07);
+    border-bottom: 1px solid currentColor;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+
+  &--with-padding-bottom {
+    &:link,
+    &:visited {
+      padding-bottom: 8px;
+    }
+  }
+
+  &:hover,
+  &:active {
+    color: var(--color-primary);
+    border-bottom: 1px solid transparent;
+  }
+}
+
+.strong {
+  font-weight: 400;
+}

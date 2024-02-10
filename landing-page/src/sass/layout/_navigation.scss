@@ -1,0 +1,104 @@
+.navigation {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  align-items: center;
+
+  background-color: var(--color-primary);
+  padding: 2.4rem 0.8rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: $layer-navbar;
+  width: $nav-width;
+  height: 100%;
+
+  @include respond(tab-land) {
+    flex-direction: row;
+
+    padding: 1.6rem 3.2rem;
+    width: 100%;
+    height: $nav-height;
+  }
+
+  &__logo {
+    width: 4.8rem;
+    height: 4.8rem;
+  }
+
+  &__menu {
+    @include respond(tab-land) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: $layer-menu;
+      width: 100%;
+      height: 100vh;
+      background-color: rgba(var(--color-primary-tint-09-rgb), 0.9);
+      -webkit-backdrop-filter: blur(5px);
+      backdrop-filter: blur(5px);
+      transform: translateX(100%);
+      transition: all 0.5s ease-in;
+      opacity: 0;
+      pointer-events: none;
+      visibility: hidden;
+    }
+
+    &-btn {
+      width: 4.8rem;
+      height: 4.8rem;
+      border: none;
+      background: none;
+      cursor: pointer;
+      color: var(--color-primary-shade-07);
+      margin-top: auto;
+      z-index: $layer-menu-btn;
+      display: none;
+
+      @include respond(tab-land) {
+        display: block;
+        margin-left: auto;
+      }
+    }
+
+    &-icon {
+      width: 4.8rem;
+      height: 4.8rem;
+      stroke: currentColor;
+      fill: currentColor;
+
+      &[name='x-outline'] {
+        display: none;
+      }
+    }
+  }
+
+  &__list {
+    list-style: none;
+
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+    align-items: center;
+  }
+}
+
+.nav-open .navigation__menu {
+  opacity: 1;
+  pointer-events: auto;
+  visibility: visible;
+  transform: translateX(0);
+}
+
+.nav-open .navigation__menu-icon[name='x-outline'] {
+  display: block;
+}
+
+.nav-open .navigation__menu-icon[name='list-outline'] {
+  display: none;
+}

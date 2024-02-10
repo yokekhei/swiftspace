@@ -1,0 +1,16 @@
+{
+  "modals": [
+    {
+      "type": "contact_form_submit_success",
+      "status_icon_name": "smiley-outline",
+      "title": "Inquiry submitted",
+      "message": "Thank you for your inquiry! Our team is on it! We'll get back to you shortly with all the details you need. In the meantime, feel free to explore more on our website or connect with us on social media. Your dream home adventure begins now!"
+    },
+    {
+      "type": "contact_form_submit_fail",
+      "status_icon_name": "smiley-sad-outline",
+      "title": "Oops, something went wrong",
+      "message": "We apologize for the inconvenience. It seems there was an issue submitting your inquiry. Please try again later or contact our support team at <a href=\"mailto:support@swiftspace.com\" class=\"text-link\">support@swiftspace.com</a>. We appreciate your understanding."
+    }
+  ]
+}

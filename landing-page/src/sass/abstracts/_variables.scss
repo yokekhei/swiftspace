@@ -1,0 +1,118 @@
+// COLORS
+:root {
+  --color-primary: #c5b358;
+  @include defineColorRGB(--color-primary, #c5b358);
+  --color-primary-shade-01: #b1a14f;
+  --color-primary-shade-02: #9e8f46;
+  --color-primary-shade-03: #8a7d3e;
+  --color-primary-shade-04: #766b35;
+  --color-primary-shade-05: #635a2c;
+  --color-primary-shade-06: #4f4823;
+  --color-primary-shade-07: #3b361a;
+  --color-primary-shade-08: #272412;
+  --color-primary-shade-09: #141209;
+  --color-primary-shade-10: #000000;
+  @include defineColorRGB(--color-primary-shade-10, #000000);
+  --color-primary-tint-01: #cbbb69;
+  --color-primary-tint-02: #d1c279;
+  @include defineColorRGB(--color-primary-tint-02, #d1c279);
+  --color-primary-tint-03: #d6ca8a;
+  --color-primary-tint-04: #dcd19b;
+  --color-primary-tint-05: #e2d9ac;
+  @include defineColorRGB(--color-primary-tint-05, #e2d9ac);
+  --color-primary-tint-06: #e8e1bc;
+  --color-primary-tint-07: #eee8cd;
+  @include defineColorRGB(--color-primary-tint-07, #eee8cd);
+  --color-primary-tint-08: #f3f0de;
+  --color-primary-tint-09: #f9f7ee;
+  @include defineColorRGB(--color-primary-tint-09, #f9f7ee);
+  --color-primary-tint-10: #ffffff;
+  --color-secondary: #002349;
+  @include defineColorRGB(--color-secondary, #002349);
+  --color-secondary-shade-01: #002042;
+  --color-secondary-shade-02: #001c3a;
+  --color-secondary-shade-03: #001933;
+  --color-secondary-shade-04: #00152c;
+  --color-secondary-shade-05: #001225;
+  --color-secondary-shade-06: #000e1d;
+  --color-secondary-shade-07: #000a16;
+  --color-secondary-shade-08: #00070f;
+  --color-secondary-shade-09: #000307;
+  --color-secondary-shade-10: #000000;
+  --color-secondary-tint-01: #1a395b;
+  --color-secondary-tint-02: #334f6d;
+  --color-secondary-tint-03: #4d6580;
+  --color-secondary-tint-04: #667b92;
+  --color-secondary-tint-05: #8091a4;
+  --color-secondary-tint-06: #99a7b6;
+  --color-secondary-tint-07: #b3bdc8;
+  --color-secondary-tint-08: #ccd3db;
+  --color-secondary-tint-09: #e6e9ed;
+  --color-secondary-tint-10: #ffffff;
+  --color-grey-01: #333333;
+  --color-grey-02: #444444;
+  --color-grey-03: #555555;
+  --color-grey-04: #666666;
+  --color-grey-05: #6f6f6f;
+  --color-grey-06: #777777;
+  --color-grey-07: #888888;
+  --color-grey-08: #aaaaaa;
+  --color-grey-09: #dddddd;
+  --color-grey-10: #eeeeee;
+
+  --layout-padding: 9.6rem;
+  --layout-padding-left-right: var(--layout-padding);
+  --layout-padding-top-bottom: 12.8rem;
+  --layout-padding-top-bottom-footer: 8rem;
+  --component-gap: 6.4rem;
+
+  @include respond(tab-land) {
+    --layout-padding: 6.4rem;
+    --layout-padding-top-bottom: 8rem;
+    --layout-padding-top-bottom-footer: 4.8rem;
+    --component-gap: 3.2rem;
+  }
+
+  @include respond(phone) {
+    --layout-padding: 4.8rem;
+    --layout-padding-top-bottom: 4.8rem;
+    --layout-padding-top-bottom-footer: 3.2rem;
+    --component-gap: 2.4rem;
+  }
+
+  --mb-smst: 0.8rem;
+  --mb-sm: 1.6rem;
+  --mb-md-sm: 2.4rem;
+  --mb-md-lg: 3.2rem;
+  --mb-lg: 4.8rem;
+  --mb-lgst: 8rem;
+}
+
+$color-heading-1: var(--color-primary-tint-09);
+$color-heading-2-light: var(--color-primary-tint-09);
+$color-heading-2-dark: var(--color-primary-shade-06);
+$color-heading-3: var(--color-primary);
+$color-heading-4-light: var(--color-primary-tint-09);
+$color-heading-4-dark: var(--color-primary-shade-07);
+$color-body-text: var(--color-primary-shade-05);
+
+$font-primary: 'Nunito', sans-serif;
+$font-display: 'Josefin Sans', sans-serif;
+
+$transition-default: all 0.3s;
+
+$layer-menu-btn: 9999;
+$layer-navbar: 9998;
+$layer-menu: 9997;
+$layer-house-img: 1;
+$layer-story-img: 2;
+$layer-house-like: 3;
+$layer-house-name: 4;
+$layer-overlay: 5;
+$layer-modal: 6;
+
+$nav-width: 7rem;
+$nav-height: 8rem;
+$story-picture-height-default: 40vw;
+$story-picture-height-tab-port: 45vw;
+$contact-img-height: 60vw;

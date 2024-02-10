@@ -1,0 +1,55 @@
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  align-items: center;
+
+  &:link,
+  &:visited {
+    text-decoration: none;
+    cursor: pointer;
+    color: var(--color-primary-shade-07);
+    transition: $transition-default;
+  }
+
+  &:hover,
+  &:active {
+    background-color: var(--color-primary-shade-01);
+    transform: translateY(-3px);
+  }
+
+  @include respond(tab-land) {
+    flex-direction: row;
+    gap: 0.8rem;
+
+    &:hover,
+    &:active {
+      background-color: rgba(var(--color-primary-tint-05-rgb), 0.5);
+    }
+  }
+
+  &__icon {
+    width: 4.8rem;
+    height: 4.8rem;
+    stroke: currentColor;
+    fill: currentColor;
+
+    @include respond(tab-land) {
+      width: 6.4rem;
+      height: 6.4rem;
+    }
+  }
+
+  &__text {
+    font-family: $font-display;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.2;
+    text-align: center;
+    color: inherit;
+
+    @include respond(tab-land) {
+      font-size: 2.4rem;
+    }
+  }
+}

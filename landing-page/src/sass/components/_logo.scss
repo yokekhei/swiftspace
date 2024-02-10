@@ -1,0 +1,15 @@
+.logo {
+  height: 4.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+
+  &__img {
+    max-height: 100%;
+  }
+
+  &__text {
+    max-height: 100%;
+  }
+}

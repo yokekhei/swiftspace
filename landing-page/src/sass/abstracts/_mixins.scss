@@ -1,0 +1,74 @@
+// Media Query Manager
+/*
+0 - 600px:      Phone
+600 - 900px:    Tablet portrait
+900 - 1200px:   Tablet landscape
+[1200 - 1800] is where the normal styles apply
+1800px + :      Big desktop
+
+$breakpoint argument choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+ORDER: base + typography > layout > pages > components
+
+1em = 16px
+*/
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == big-desktop {
+    // 1800px/16px = 112.5
+    @media only screen and (min-width: 112.5em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == desktop {
+    // 1440px/16px = 90
+    @media only screen and (max-width: 90em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == small-desktop {
+    // 1300px/16px = 81.25
+    @media only screen and (max-width: 81.25em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tab-land {
+    // 1200px/16px = 75
+    @media only screen and (max-width: 75em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tab-port {
+    @media only screen and (max-width: 56.25em) {
+      // 900px/16px = 56.25
+      @content;
+    }
+  }
+
+  @if $breakpoint == phone {
+    @media only screen and (max-width: 37.5em) {
+      // 600px/16px = 37.5
+      @content;
+    }
+  }
+}
+
+// Color
+@mixin defineColorRGB($color-name, $value) {
+  $red: red($value);
+  $green: green($value);
+  $blue: blue($value);
+  #{$color-name}: unquote('rgb(#{$red}, #{$green}, #{$blue})');
+  #{$color-name}-rgb: $red, $green, $blue;
+  #{$color-name}-r: $red;
+  #{$color-name}-g: $green;
+  #{$color-name}-b: $blue;
+}

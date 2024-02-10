@@ -1,0 +1,111 @@
+.contact {
+  background: linear-gradient(
+    107.06deg,
+    var(--color-primary-tint-07) 0%,
+    var(--color-primary-tint-02) 100%
+  );
+
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 2fr 1fr;
+
+  @include respond(tab-port) {
+    grid-template-row: repeat(2, min-content);
+    grid-template-columns: 1fr;
+  }
+
+  &__text-box {
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+    padding: 4.8rem 6.4rem;
+
+    display: grid;
+    grid-template-rows: repeat(2, min-content);
+    grid-template-columns: 1fr;
+    row-gap: 3.2rem;
+
+    @include respond(tab-port) {
+      padding: 4.8rem 4.8rem;
+      grid-row: 2 / 3;
+      grid-column: 1 / 2;
+    }
+  }
+
+  &__content {
+    grid-row: 1 / 2;
+
+    display: grid;
+    grid-template-rows: repeat(2, min-content);
+    grid-template-columns: 1fr;
+    row-gap: 2.4rem;
+  }
+
+  &__heading {
+    grid-row: 1 / 2;
+  }
+
+  &__text {
+    grid-row: 2 / 3;
+    font-size: 1.8rem;
+    line-height: 1.8;
+  }
+
+  &__form {
+    grid-row: 2 / 3;
+
+    display: grid;
+    grid-template-rows: repeat(3, min-content);
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 2.4rem;
+    column-gap: 3.2rem;
+
+    .form-input-item:nth-child(3) {
+      grid-row: 2 / 3;
+      grid-column: 1 / -1;
+    }
+
+    &-btn {
+      grid-row: 3 / 4;
+      grid-column: 1 / 2;
+      justify-self: start;
+    }
+
+    @include respond(phone) {
+      grid-template-rows: repeat(4, min-content);
+      grid-template-columns: 1fr;
+
+      .form-input-item:nth-child(3) {
+        grid-row: 3 / 4;
+      }
+
+      &-btn {
+        grid-row: 4 / 5;
+      }
+    }
+  }
+
+  &__img-box {
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+    background: linear-gradient(
+        180deg,
+        rgba(var(--color-primary-tint-07-rgb), 0.5) 0%,
+        rgba(var(--color-primary-tint-02-rgb), 0.5) 100%
+      ),
+      url(../img/contact.jpg);
+    background-size: cover;
+    background-position: center;
+
+    @include respond(tab-port) {
+      grid-row: 1 / 2;
+      grid-column: 1 / 2;
+      width: 100%;
+      height: $contact-img-height;
+    }
+  }
+
+  *:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.8rem rgba(var(--color-primary-tint-02-rgb), 0.5);
+  }
+}
